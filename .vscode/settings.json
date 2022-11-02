@@ -1,0 +1,8 @@
+{
+    // ...前面的保持原状就可以
+    "typescript.tsserver.pluginPaths": [
+        "typescript-plugin-css-modules"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}
