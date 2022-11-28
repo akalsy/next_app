@@ -1,3 +1,13 @@
+/*
+ * @Author: rick_liu hermanyu666@gmail.com
+ * @Date: 2022-11-28 11:13:16
+ * @LastEditors: rick_liu hermanyu666@gmail.com
+ * @LastEditTime: 2022-11-28 15:24:24
+ * @FilePath: \study\next_app\components\footer\index.tsx
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by rick_liu hermanyu666@gmail.com, All Rights Reserved. 
+ */
 import { FC } from "react";
 import styles from "./style.module.scss";
 import cName from "classnames";
@@ -36,8 +46,7 @@ export const Footer: FC<IFooterProps> = ({
 }) => {
   return (
     <div className={styles.footer}>
-      <div className={styles.topArea}>
-        <h1 className={styles.footerTitle}>{title}</h1>
+      {/* <div className={styles.topArea}>
         <div className={styles.linkListArea}>
           {linkList?.map((item, index) => {
             return (
@@ -70,8 +79,8 @@ export const Footer: FC<IFooterProps> = ({
             );
           })}
         </div>
-      </div>
-      <div className={styles.bottomArea}>
+      </div> */}
+      {/* <div className={styles.bottomArea}>
         <div className={styles.codeArea}>
           <div>
             <Image
@@ -82,22 +91,18 @@ export const Footer: FC<IFooterProps> = ({
             ></Image>
           </div>
         </div>
-      </div>
-      <div className={styles.numArea}>
+      </div> */}
+      {/* <div className={styles.numArea}>
         <span>{copyRight}</span>
         <span>{siteNumber}</span>
-        <div className={styles.publicLogo}>
-          <div className={styles.logo}>
-            <Image
-              src={publicLogo}
-              alt={publicNumber}
-              width={20}
-              height={20}
-            ></Image>
-          </div>
-          <span>{publicNumber}</span>
-        </div>
-      </div>
+        <Image
+          src={publicLogo}
+          alt={publicNumber}
+          width={20}
+          height={20}
+        ></Image>
+        <span>{publicNumber}</span>
+      </div> */}
     </div>
   );
 };
