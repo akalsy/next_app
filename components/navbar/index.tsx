@@ -1,9 +1,9 @@
 /*
  * @Author: lsy155497 LiuSY155497@yimidida.com
  * @Date: 2022-09-30 16:23:05
- * @LastEditors: lsy155497 LiuSY155497@yimidida.com
- * @LastEditTime: 2022-11-16 11:22:00
- * @FilePath: /next/my-app/components/navbar/index.tsx
+ * @LastEditors: rick_liu hermanyu666@gmail.com
+ * @LastEditTime: 2022-11-29 11:06:41
+ * @FilePath: \study\next_app\components\navbar\index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { FC, useContext, useRef } from "react";
@@ -25,7 +25,7 @@ export const NavBar: FC<INavBarProps> = ({ }) => {
         <div className={styles.logoIcon}></div>
       </a>
       <div className={styles.themeArea}>
-        <div
+        {/* <div
           className={styles.popupText}
           onClick={(): void => {
             console.log(popupRef.current)
@@ -33,7 +33,7 @@ export const NavBar: FC<INavBarProps> = ({ }) => {
           }}
         >
           弹窗示范
-        </div>
+        </div> */}
         {userAgent === Environment.pc && (
           <span className={styles.text}>当前是pc端样式</span>
         )}

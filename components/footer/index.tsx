@@ -2,107 +2,27 @@
  * @Author: rick_liu hermanyu666@gmail.com
  * @Date: 2022-11-28 11:13:16
  * @LastEditors: rick_liu hermanyu666@gmail.com
- * @LastEditTime: 2022-11-28 15:24:24
+ * @LastEditTime: 2022-12-02 11:47:49
  * @FilePath: \study\next_app\components\footer\index.tsx
  * @Description: 
  * 
  * Copyright (c) 2022 by rick_liu hermanyu666@gmail.com, All Rights Reserved. 
  */
-import { FC } from "react";
-import styles from "./style.module.scss";
-import cName from "classnames";
-import publicLogo from "@/public/public_logo.png";
-import Image from "next/image";
+import { FC, useState } from "react";
+import { ChildComponent } from './ChildComponent'
 
-interface ILink {
-  label: string;
-  link?: string;
-}
-interface linkList {
-  title: string;
-  list: ILink[];
-}
-interface IQRCode {
-  image: string;
-  text: string;
-}
+interface IFooterProps { }
 
-export interface IFooterProps {
-  title: string;
-  linkList: linkList[];
-  copyRight: string;
-  qrCode: IQRCode;
-  siteNumber: string;
-  publicNumber: string;
-}
 
-export const Footer: FC<IFooterProps> = ({
-  title,
-  linkList,
-  qrCode,
-  copyRight,
-  siteNumber,
-  publicNumber,
-}) => {
+
+export const Footer: FC<IFooterProps> = ({ }) => {
+  const [xiaohong, setXiaohong] = useState('xiao hong onCalled!')
+  const [xiaoMing, setXiaoMing] = useState('xiao ming onCalled!')
   return (
-    <div className={styles.footer}>
-      {/* <div className={styles.topArea}>
-        <div className={styles.linkListArea}>
-          {linkList?.map((item, index) => {
-            return (
-              <div className={styles.linkArea} key={`linkArea${index}`}>
-                <span className={styles.title}>{item.title}</span>
-                <div className={styles.links}>
-                  {item.list?.map((_item, _index) => {
-                    return (
-                      <div
-                        className={cName({
-                          [styles.link]: _item.link,
-                          [styles.disabled]: !_item.link,
-                        })}
-                        onClick={() => {
-                          _item.link &&
-                            window.open(
-                              _item.link,
-                              "blank",
-                              "noopener=yes,noreferrer=yes"
-                            );
-                        }}
-                        key={`link${_index}`}
-                      >
-                        {_item.label}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
-      {/* <div className={styles.bottomArea}>
-        <div className={styles.codeArea}>
-          <div>
-            <Image
-              src={qrCode?.image}
-              alt={qrCode?.text}
-              width={56}
-              height={56}
-            ></Image>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={styles.numArea}>
-        <span>{copyRight}</span>
-        <span>{siteNumber}</span>
-        <Image
-          src={publicLogo}
-          alt={publicNumber}
-          width={20}
-          height={20}
-        ></Image>
-        <span>{publicNumber}</span>
-      </div> */}
-    </div>
-  );
+    <>
+      <button onClick={() => { setXiaohong(new Date().getTime() + "") }}>xiaohong</button>
+      <button onClick={() => { setXiaoMing(new Date().getTime() + "") }}>xiaoMing</button>
+      <ChildComponent name={xiaohong}>{xiaoMing}</ChildComponent>
+    </>
+  )
 };

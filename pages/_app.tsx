@@ -1,9 +1,9 @@
 /*
  * @Author: lsy155497 LiuSY155497@yimidida.com
  * @Date: 2022-09-30 10:09:20
- * @LastEditors: lsy155497 LiuSY155497@yimidida.com
- * @LastEditTime: 2022-11-09 10:39:15
- * @FilePath: /next/my-app/pages/_app.tsx
+ * @LastEditors: rick_liu hermanyu666@gmail.com
+ * @LastEditTime: 2022-11-29 14:38:44
+ * @FilePath: \study\next_app\pages\_app.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import "../styles/globals.css";
@@ -26,7 +26,7 @@ const MyApp = (data: AppProps & ILayoutProps) => {
   return (
     <div>
       <Head>
-        <title>SSR官网demo</title>
+        <title>Front Blogs</title>
         <meta name="description" content="ssr demo"></meta>
         <link rel="icon" href="/favicon.ico"></link>
       </Head>

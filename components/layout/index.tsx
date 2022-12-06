@@ -16,6 +16,7 @@ export const Layout: FC<ILayoutProps & { children: JSX.Element }> = ({
 }) => {
   return (
     <div className={styles.layout}>
+      <div className={styles.starsec}></div>
       <NavBar {...navbarData}></NavBar>
       <main className={styles.main}>{children}</main>
       <Footer {...footerData}></Footer>
